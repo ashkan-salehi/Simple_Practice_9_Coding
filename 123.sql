@@ -1,9 +1,9 @@
--- 2. Create the log table for the trigger
+-- Create the log table for the trigger
 CREATE TABLE trigger_test (
     Message VARCHAR(100)
 );
 
--- 3. Create the Trigger using SQLite-compatible syntax (CASE instead of IF/ELSE)
+--  Create the Trigger using SQLite-compatible syntax
 CREATE TRIGGER my_trigger 
 BEFORE INSERT ON employee
 FOR EACH ROW 
@@ -18,7 +18,7 @@ BEGIN
     );
 END;
 
--- 4. Test the Trigger with an insert
+-- Test the Trigger with an insert
 INSERT INTO employee
 VALUES (109, 'Oscar', 'Martinez', '1968-02-19', 'M', 69000);
 
